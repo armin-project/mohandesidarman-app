@@ -1,0 +1,30 @@
+{
+    "name": "armin-project/mohandesidarman-app",
+    "description": "A Laravel Nova tool.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "armincms/coursera": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArminProject\\MohandesidarmanApp\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArminProject\\MohandesidarmanApp\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
