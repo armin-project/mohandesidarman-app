@@ -10,10 +10,7 @@
         "php": ">=7.1.0",
         "armincms/coursera": "*"
     },
-    "autoload": {
-        "psr-4": {
-            "ArminProject\\MohandesidarmanApp\\": "src/"
-        }
+    "autoload": { 
     },
     "extra": {
         "laravel": {
