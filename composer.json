@@ -13,10 +13,7 @@
     "autoload": { 
     },
     "extra": {
-        "laravel": {
-            "providers": [
-                "ArminProject\\MohandesidarmanApp\\ToolServiceProvider"
-            ]
+        "laravel": { 
         }
     },
     "config": {
