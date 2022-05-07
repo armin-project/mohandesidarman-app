@@ -10,7 +10,7 @@
         "php": ">=7.1.0",
         "armincms/coursera": "*",
         "armincms/api": "*",
-        "armincms/qasedak": "^0.1"
+        "armincms/arminsms": "^0.1"
     },
     "autoload": {},
     "extra": {
