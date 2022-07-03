@@ -34,7 +34,7 @@ class ServiceProvider extends AuthServiceProvider
             return;
         }
 
-        \Route::middleware([/*'auth:sanctum'*/])->post('mdarman/courses/{course}/subscribe', [
+        \Route::middleware(['auth:sanctum'])->post('mdarman/courses/{course}/subscribe', [
             'as' => 'mdarman.subscribe',
             'uses' => Http\Controllers\SubscribeController::class,
         ]);
