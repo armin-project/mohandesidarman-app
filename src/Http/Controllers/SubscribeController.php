@@ -4,7 +4,9 @@ namespace Armincms\MDarman\Http\Controllers;
 
 use Armincms\MDarman\Http\Requests\SubscribeRequest;
 use Armincms\Coursera\Nova\Course;
+use Armincms\Orderable\Nova\Billing;
 use Armincms\Orderable\Nova\Order;
+use Zareismail\Gutenberg\Gutenberg;
 
 class SubscribeController extends Controller
 {
@@ -26,7 +28,12 @@ class SubscribeController extends Controller
             'imei' => $request->get('imei'),
         ]);
 
-        return $order->redirect($request);
+        $fragment = Gutenberg::cachedFragments()->find(Billing::billingPage());
+
+        return [
+            'redirect' => $fragment->getUrl($order->getUri()),
+            'trackingCode' => $order->trackingCode(),
+        ];
     }
 
     public function subscribed(SubscribeRequest $request)
