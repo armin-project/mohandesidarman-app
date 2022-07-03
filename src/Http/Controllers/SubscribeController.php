@@ -22,7 +22,8 @@ class SubscribeController extends Controller
 
         $order->addItem($course, [
             'course' => $request->route('course'),
-            'user' => $request->user()->getKey()
+            'user' => $request->user()->getKey(),
+            'imei' => $request->get('imei'),
         ]);
 
         return $order->redirect($request);
