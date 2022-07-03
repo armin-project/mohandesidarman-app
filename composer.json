@@ -10,11 +10,20 @@
         "php": ">=7.1.0",
         "armincms/coursera": "*",
         "armincms/api": "*",
-        "armincms/arminsms": "^0.1"
+        "armincms/arminsms": "^0.1",
+        "armincms/orderable": "^1.0"
     },
-    "autoload": {},
+    "autoload": {
+        "psr-4": {
+            "Armincms\\MDarman\\": "src/"
+        }
+    },
     "extra": {
-        "laravel": {}
+        "laravel": {
+            "providers": [
+                "Armincms\\MDarman\\ServiceProvider"
+            ]
+        }
     },
     "config": {
         "sort-packages": true
