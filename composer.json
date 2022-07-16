@@ -11,7 +11,8 @@
         "armincms/coursera": "*",
         "armincms/api": "*",
         "armincms/arminsms": "^0.1",
-        "armincms/orderable": "^1.0"
+        "armincms/orderable": "^1.0",
+        "armincms/zarinpal": "*"
     },
     "autoload": {
         "psr-4": {
