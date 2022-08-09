@@ -38,10 +38,12 @@ class SubscribeController extends Controller
 
     public function subscribed(SubscribeRequest $request)
     {
-        return response(
-            '<a href="'
-            .config('mdarman.callbackUrl')
-            . '">برای بازگشت به برنامه کلیک نمایید.</a>'
-        );
+        return view()->exists('application-callback')
+            ? view('application-callback')
+            : response(
+                '<a href="'
+                .config('mdarman.callbackUrl')
+                . '">برای بازگشت به برنامه کلیک نمایید.</a>'
+            );
     }
 }
