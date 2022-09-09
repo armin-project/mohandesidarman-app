@@ -12,6 +12,7 @@
         "armincms/api": "*",
         "armincms/arminsms": "^0.1",
         "armincms/orderable": "^1.0",
+        "armincms/mobile-app": "~0.1",
         "armincms/zarinpal": "*"
     },
     "autoload": {
